@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 700;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.forms {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row-reverse;
+}
+.img-section {
+  width: 40%;
+}
+.form-section {
+  width: 60%;
+  padding: 40px;
+}
+.form-logo {
+  object-fit: contain;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.signup {
+  color: blue;
+  font-size: 30px;
+  margin-bottom: .8em;
+  margin: 2em 2em 0 1.5em;
+}
+.input-text {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.input-text .name, .input-text .checked {
+  width: 48%;
+}
+.input-text .name input, 
+.input-text .name select {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  margin-top: 8px;
+}
+.text-input {
+  width: 100%;
+}
+textarea {
+  width: 100%;
+  height: 40px;
+  margin-top: 8px;
+}
+.button-section > button {
+  width: 28;
+  background-color: blue;
   color: white;
+  text-align: center;
+  padding:  15px 40px;
+  border: none;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  float: right;
+  margin-top: .5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
+}
+.check-radio > input[type="radio"] {
+  width: 1.5em;
+  height: 1.5em;
+  margin-top: 1.5rem;
+  vertical-align: sub;
+}
+.checked {
+  display: flex;
+  column-gap: 2rem;
+}
+.modal {
+  width: 20em;
+  height: 26em;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: absolute;
+  z-index: 999;
+  right: 50%;
+  left: 40%;
+  margin-top: 50px;
+  border-radius: 8px;
+  padding: 20px 10px;
+}
+.modal-content {
+  margin-top: 50px;
+  padding: 10px 17px;
+}
+.close {
+  float: right;
+  cursor: pointer;
+  font-weight: lighter;
+}
+.list-modal {
+  padding-bottom: 20px;
+}
+.submit-text {
+  margin-bottom: 18px;
+}
+.btn-submit button {
+  float: right;
+  padding: 10px 15px;
+  background-color: darkgray;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none;
+  cursor: pointer;
+}
+.submitted {
+  text-align: center;
+  padding-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media(max-width:600px) {
+  .forms {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .signup {
+    font-size: 22px;
+  }
+  .form-section {
+    width: 100%;
+  }
+  .input-text {
+    flex-direction: column;
+  }
+  .input-text .name, .input-text .checked {
+    width: 100%;
+  }
+  .img-section {
+    display: none;
+  }
+  .modal {
+    left: 5%;
+    right: 0;
   }
 }
