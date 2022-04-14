@@ -88,7 +88,7 @@ function App() {
                 </div>
                 <div className="name">
                   <label>Bio</label> <br />
-                  <textarea name="Bio" value={formData.Bio} onChange={handleChange}></textarea>
+                  <textarea name="Bio" value={formData.Bio} onChange={handleChange} />
                 </div>
               </div>
               <div className="button-section">

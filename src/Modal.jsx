@@ -16,7 +16,7 @@ const Modal = ({ setSubmitting, setFormData, formData }) => {
             setFormData({
                 reset: true
             })
-        }, 3000);
+        }, 700);
     }
     return (
         <div className='modal'>
@@ -31,9 +31,9 @@ const Modal = ({ setSubmitting, setFormData, formData }) => {
                     <div className='modal-content'>
                         <h4 className='submit-text'>You are submitting the following:</h4>
                         <ul>
-                            {Object.entries(formData).map(([name, value]) => (
+                            {Object.entries(formData).map(([name, value], index) => (
                                 <div className='list-modal'>
-                                    <li key={name}><strong>{name}</strong>: {value.toString()}</li>
+                                    <li key={index}><i>{name}</i>: {value.toString()}</li>
                                     <hr />
                                 </div>
                             ))}
