@@ -54,17 +54,17 @@ function App() {
               <div className="input-text">
                 <div className="name">
                   <label>First Name</label> <br />
-                  <input type="text" name='FirstName' value={formData.FirstName} onChange={handleChange} />
+                  <input type="text" name='FirstName' value={formData.FirstName || ""} onChange={handleChange} />
                 </div>
                 <div className="name">
                   <label>Last Name</label> <br />
-                  <input type="text" name='LastName' value={formData.LastName} onChange={handleChange} />
+                  <input type="text" name='LastName' value={formData.LastName || ""} onChange={handleChange} />
                 </div>
               </div>
               <div className="input-text">
                 <div className="name">
                   <label>Email</label> <br />
-                  <input type="email" name='Email' value={formData.Email} onChange={handleChange} />
+                  <input type="email" name='Email' value={formData.Email || ""} onChange={handleChange} />
                 </div>
                 <div className="checked">
                   <div className="check-radio">
@@ -84,11 +84,11 @@ function App() {
               <div className="input-text">
                 <div className="name">
                   <label>Address</label> <br />
-                  <input type="text" name='Address' value={formData.Address} onChange={handleChange} />
+                  <input type="text" name='Address' value={formData.Address || ""} onChange={handleChange} />
                 </div>
                 <div className="name">
                   <label>Bio</label> <br />
-                  <textarea name="Bio" value={formData.Bio} onChange={handleChange} />
+                  <textarea name="Bio" value={formData.Bio || ""} onChange={handleChange} />
                 </div>
               </div>
               <div className="button-section">

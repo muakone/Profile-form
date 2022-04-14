@@ -32,7 +32,7 @@ const Modal = ({ setSubmitting, setFormData, formData }) => {
                         <h4 className='submit-text'>You are submitting the following:</h4>
                         <ul>
                             {Object.entries(formData).map(([name, value], index) => (
-                                <div className='list-modal'>
+                                <div className='list-modal' key={index}>
                                     <li key={index}><i>{name}</i>: {value.toString()}</li>
                                     <hr />
                                 </div>
